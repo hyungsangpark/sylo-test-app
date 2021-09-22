@@ -16,7 +16,7 @@ function App() {
         <Route path="/sendToContact">
           <SendToContactScreen />
         </Route>
-        <Route path="/addContact">
+        <Route path="/newContact">
           <NewContactScreen />
         </Route>
         <Route path="/contacts">

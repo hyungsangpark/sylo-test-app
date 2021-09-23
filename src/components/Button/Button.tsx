@@ -20,10 +20,10 @@ function Button({ onClick, children, color, variant }: IButtonProps) {
     <button
       onClick={onClick}
       color={color}
-      className="button"
+      className="capsule-shape interactive"
       style={{
         backgroundColor: isOutlinedButton ? "white" : color,
-        border: `medium none ${color}`,
+        borderColor: `${color}`,
         color: isOutlinedButton ? color : "white",
       }}
     >

@@ -1,0 +1,15 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  height: 20px;
+  width: 1000px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}

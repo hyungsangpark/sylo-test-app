@@ -1,7 +1,31 @@
-.contact-rows {
-  width: 400px;
-  margin-top: 10px;
+.contacts-screen-root {
+  width: 500px;
   margin-bottom: 30px;
+}
+
+.header-row {
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.new-contacts-row {
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.contact-rows {
+  width: 100%;
+  /* margin-top: 10px; */
+  margin-bottom: 50px;
+}
+/* 
+.contact-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+} */
+
+.disconnect-button-row {
+  width: 100%;
 }
 
 .remove-underline {

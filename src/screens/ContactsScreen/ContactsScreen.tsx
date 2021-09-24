@@ -36,23 +36,27 @@ function ContactsScreen() {
   }, [active]);
 
   return (
-    <div>
-      <Header
-        backLinkAddress="/"
-        // backOnClick={deactivate}
-        backOnClick={() => setContacts([...contacts, {name: "Spark Mobile", address: "hey!"}])}
-        headerTitle="Address Book"
-      />
+    <div className="contacts-screen-root">
+      <div className="header-row">
+        <Header
+          backLinkAddress="/"
+          // backOnClick={deactivate}
+          backOnClick={() => setContacts([...contacts, {name: "Spark Mobile", address: "hey!"}])}
+          headerTitle="Address Book"
+        />
+      </div>
 
+      <div className="new-contacts-row">
       <Link to="/newContact" style={{ textDecoration: "none" }}>
         <NewContactRow />
       </Link>
+      </div>
 
+      <div className="contact-rows">
         {contacts.map((contact, i) => {
-          console.log("this is inside contact");
           return <Link
             to="/sendToContact/"
-            className="remove-underline"
+            className="contact-row remove-underline"
             id={i.toString()}
             onClick={() => {
               console.log();
@@ -61,10 +65,9 @@ function ContactsScreen() {
             <ContactRow name={contact.name} />
           </Link>;
         })}
-      <div className="contact-rows">
       </div>
 
-      <Link to="/" style={{ width: "100%", marginTop: 10 }}>
+      <Link to="/" className="disconnect-button-row">
         <CapsuleButton
           color={Colors.Blue}
           onClick={deactivate}

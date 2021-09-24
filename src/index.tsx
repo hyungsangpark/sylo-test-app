@@ -4,14 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+    const account = await web3.eth.getAccounts();
+    // console.log(account);
 
 ReactDOM.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </BrowserRouter>,
-  document.getElementById('root')
+  <Web3ReactProvider getLibrary={getLibrary}>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </Web3ReactProvider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

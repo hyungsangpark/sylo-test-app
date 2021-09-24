@@ -6,7 +6,6 @@ import StartScreen from './screens/StartScreen/StartScreen';
 import NewContactScreen from './screens/NewContactScreen/NewContactScreen';
 import SendToContactScreen from './screens/SendToContactScreen/SendToContactScreen';
 
-
 function App() {
   return (
     <div className="App">

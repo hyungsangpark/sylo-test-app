@@ -1,0 +1,20 @@
+.capsule-input-field {
+  width: 95%;
+  height: 40px;
+  margin: 2px;
+  padding-left: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  border-radius: 100px;
+  border-style: none;
+  border-color: #f6f6f6;
+
+  background-color: #f6f6f6;
+}
+
+.capsule-input-field:focus {
+  outline: none;
+}

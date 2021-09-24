@@ -1,7 +1,21 @@
-#root {
+.start-screen-root {
+  height: 100vh;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.header {
+  color: #646464;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.description {
+  margin-top: 5px;
+  margin-bottom: 40px;
 }
 
 .buttons {
@@ -10,6 +24,6 @@
 }
 
 .image {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }

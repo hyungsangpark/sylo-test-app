@@ -1,0 +1,9 @@
+.contact-rows {
+  width: 400px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.remove-underline {
+  text-decoration: none;
+}

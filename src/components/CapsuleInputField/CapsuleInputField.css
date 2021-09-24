@@ -1,12 +1,18 @@
 .capsule-input-field {
-  width: 95%;
-  height: 40px;
+  width: 90%;
+  min-height: 40px;
   margin: 2px;
   padding-left: 5%;
+  padding-right: 5%;
+  overflow-wrap: break-word;
+  resize: none;
+
+  font-family: inherit;
+  font-size: 16px;
 
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: left;
 
   border-radius: 100px;
   border-style: none;

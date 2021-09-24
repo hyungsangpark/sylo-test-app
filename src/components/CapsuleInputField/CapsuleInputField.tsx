@@ -4,20 +4,25 @@ import "./CapsuleInputField.css";
 
 interface ICapsuleInputFieldProps {
   value?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+  forCurrency?: boolean;
+  onChange?: ChangeEventHandler<HTMLTextAreaElement>;
 }
 
-function CapsuleInputField({ value, onChange }: ICapsuleInputFieldProps) {
+function CapsuleInputField({
+  value,
+  onChange,
+  forCurrency,
+}: ICapsuleInputFieldProps) {
   const setUnit = (value: string | undefined) => {
     value = value ?? "0 ETH";
-    return value.replace(new RegExp(` ETH`), "") + " ETH";
+    return value.replace(new RegExp(`([ ETH]+)`), "") + " ETH";
   };
 
   return (
-    <input
+    <textarea
       className="capsule-input-field"
-      type="text"
-      value={setUnit(value)}
+      // rows={1}
+      value={forCurrency ? setUnit(value) : value}
       onChange={onChange}
     />
   );

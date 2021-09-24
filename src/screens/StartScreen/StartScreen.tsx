@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import CapsuleButton from "../../components/CapsuleButton/CapsuleButton";
 import { useWeb3React } from "@web3-react/core";
 import Web3 from "web3";
@@ -18,7 +18,7 @@ function StartScreen() {
   useEffect(() => {
     if (library != null) {
       library.eth.getAccounts().then((accounts: string[]) => {
-        console.log(accounts[0])
+        console.log(accounts[0]);
 
         library.eth.getBalance(accounts[0]).then((value: string) => {
           console.log(
@@ -31,22 +31,25 @@ function StartScreen() {
     }
   }, [active]);
 
+  const history = useHistory();
+
   return (
     <div className="start-screen-root">
       <img
         src="https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg"
         className="image"
       />
-      <h1 className="header">Crypto address book</h1>
+      <h1 className="app-title">Crypto address book</h1>
       <p className="description">
         The easiest and quickest way to manage <br />
         and pay your contacts. <br />
         Connect your wallet to begin.
       </p>
       <CapsuleButton
-        onClick={() => {
+        onClick={async () => {
           try {
-            activate(injected);
+            await activate(injected);
+            history.push("/contacts")
           } catch (e) {
             console.log(e);
           }
@@ -56,7 +59,11 @@ function StartScreen() {
       </CapsuleButton>
       <CapsuleInputField
         value={balance}
-        onChange={(e) => setBalance(e.target.value)}
+        forCurrency
+        onChange={(e) => {
+          console.log(e.target.value);
+          setBalance(e.target.value);
+        }}
       />
     </div>
   );

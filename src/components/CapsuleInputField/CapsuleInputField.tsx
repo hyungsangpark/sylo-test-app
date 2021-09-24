@@ -15,7 +15,7 @@ function CapsuleInputField({
 }: ICapsuleInputFieldProps) {
   const setUnit = (value: string | undefined) => {
     value = value ?? "0 ETH";
-    return value.replace(new RegExp(`([ ETH]+)`), "") + " ETH";
+    return value.replace(new RegExp("([ ETH]+)"), "") + " ETH";
   };
 
   return (

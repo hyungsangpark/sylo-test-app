@@ -1,0 +1,30 @@
+.header-root {
+  margin: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.header-button-area {
+  width: 50px;
+  cursor: pointer;
+}
+
+.header-back-button {
+  color: black;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.header-title {
+  font-weight: 300;
+}
+
+.header-edit-button {
+  color: var(--app-blue);
+  font-size: 16px;
+}

@@ -1,0 +1,24 @@
+.contact-row-root {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.circle {
+  padding: 15px;
+
+  background-color: #8c96a8;
+  
+  border-radius: 50%;
+
+  color: white;
+  
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.name {
+  margin-left: 20px;
+  color: black;
+}

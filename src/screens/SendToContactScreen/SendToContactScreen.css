@@ -1,0 +1,46 @@
+#send-to-contact-screen-root {
+  width: 500px;
+  margin-bottom: 30px;
+}
+
+.blue-text {
+  color: var(--app-blue);
+}
+
+#profile-container {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 30px 0px;
+}
+
+#profile-circle {
+  width: 120px;
+  height: 120px;
+  font-size: 32px;
+  margin: 10px 0px;
+}
+
+#profile-wallet-address {
+  width: 50%;
+  margin: 20px 0px;
+  
+  overflow-wrap: break-word;
+  text-transform: lowercase;
+}
+
+#amount-container {
+  margin: 20px 0px;
+}
+
+#estimate-gas-fee {
+  margin-top: 20px;
+}
+
+#send-button {
+  margin-top: 50px;
+  height: 30px;
+}

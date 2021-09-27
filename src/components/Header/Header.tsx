@@ -5,7 +5,7 @@ import "./Header.css";
 
 interface IHeaderProps {
   backLinkAddress: string;
-  backOnClick: () => void;
+  backOnClick?: () => void;
   editLinkAddress?: string;
   editOnClick?: () => void;
   headerTitle?: string;
@@ -33,10 +33,10 @@ function Header({
         <Link
           to={editLinkAddress ?? ""}
           className="remove-underline header-button-area"
+          style={editLinkAddress ? {} : { display: "none" }}
         >
           <div
             className="header-edit-button"
-            style={editLinkAddress ? {} : { display: "none" }}
             onClick={editOnClick}
           >
             Edit

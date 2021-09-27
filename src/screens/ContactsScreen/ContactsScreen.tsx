@@ -12,7 +12,7 @@ import NewContactRow from "../../components/NewContactRow/NewContactRow";
 import "./ContactsScreen.css";
 import Header from "../../components/Header/Header";
 import { IContact } from "../../common/IContact";
-import {useContact, useContactUpdate } from "../../common/ContactContext";
+import { useContact, useContactUpdate } from "../../common/ContactContext";
 
 function ContactsScreen() {
   const history = useHistory();
@@ -27,10 +27,10 @@ function ContactsScreen() {
     const contacts = localStorage.getItem("contacts");
 
     if (contacts === null) localStorage.setItem("contacts", "[]");
-    
+
     setContacts(JSON.parse(contacts ?? "[]"));
   }, []);
-  
+
   useEffect(() => {
     // If metamask wallet is not active, send user back to the initial screen.
     if (!active) history.push("/");
@@ -38,41 +38,40 @@ function ContactsScreen() {
 
   return (
     <div className="contacts-screen-root">
-      <div className="header-row">
-        <Header
-          backLinkAddress="/"
-          // backOnClick={deactivate}
-          backOnClick={() => setContacts([...contacts, {name: "Spark Mobile", address: "hey!"}])}
-          headerTitle="Address Book"
-        />
-      </div>
+      <Header
+        backLinkAddress="/"
+        // backOnClick={deactivate}
+        backOnClick={() =>
+          setContacts([...contacts, { name: "Spark Mobile", address: "hey!" }])
+        }
+        headerTitle="Address Book"
+      />
 
       <div className="new-contacts-row">
-      <Link to="/newContact" style={{ textDecoration: "none" }}>
-        <NewContactRow />
-      </Link>
+        <Link to="/newContact" style={{ textDecoration: "none" }}>
+          <NewContactRow />
+        </Link>
       </div>
 
       <div className="contact-rows">
         {contacts.map((contact, i) => {
-          return <Link
-            to="/sendToContact/"
-            className="contact-row remove-underline"
-            id={i.toString()}
-            onClick={() => {
-              setContact(contact);
-            }}
-          >
-            <ContactRow name={contact.name} />
-          </Link>;
+          return (
+            <Link
+              to="/sendToContact/"
+              className="contact-row remove-underline"
+              id={i.toString()}
+              onClick={() => {
+                setContact(contact);
+              }}
+            >
+              <ContactRow name={contact.name} />
+            </Link>
+          );
         })}
       </div>
 
       <Link to="/" className="disconnect-button-row">
-        <CapsuleButton
-          color={Colors.Blue}
-          onClick={deactivate}
-        >
+        <CapsuleButton color={Colors.Blue} onClick={deactivate}>
           Disconnect
         </CapsuleButton>
       </Link>

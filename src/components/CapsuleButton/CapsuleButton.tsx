@@ -8,9 +8,16 @@ interface ICapsuleButtonProps {
   children?: ReactNode;
   color?: string;
   variant?: string;
+  disabled?: boolean;
 }
 
-function CapsuleButton({ onClick, children, color, variant }: ICapsuleButtonProps) {
+function CapsuleButton({
+  onClick,
+  children,
+  color,
+  variant,
+  disabled,
+}: ICapsuleButtonProps) {
   const isOutlinedButton = variant === "outlined";
 
   color = color ?? Colors.Orange;
@@ -25,6 +32,7 @@ function CapsuleButton({ onClick, children, color, variant }: ICapsuleButtonProp
     <button
       className="capsule-button"
       onClick={onClick}
+      disabled={disabled}
       color={color}
       style={
         isOutlinedButton

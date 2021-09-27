@@ -5,7 +5,7 @@ import CapsuleInputField from "../../components/CapsuleInputField/CapsuleInputFi
 import Header from "../../components/Header/Header";
 
 import "./SendToContactScreen.css";
-import {useContact} from "../../common/ContactContext";
+import { useContact } from "../../common/ContactContext";
 
 function SendToContactScreen() {
   const contact = useContact();
@@ -14,17 +14,18 @@ function SendToContactScreen() {
 
   if (contact === undefined) history.push("/contacts/");
 
-  const initials = contact?.name.split(" ").map((n) => n[0]).join("");
+  const initials = contact?.name
+    .split(" ")
+    .map((n) => n[0])
+    .join("");
 
   return (
     <div id="send-to-contact-screen-root">
-      <div className="header-row">
-        <Header
-          backLinkAddress="/contacts"
-          headerTitle={`Send to ${contact?.name}`}
-          editLinkAddress="/editContact/"
-        />
-      </div>
+      <Header
+        backLinkAddress="/contacts/"
+        headerTitle={`Send to ${contact?.name}`}
+        editLinkAddress="/editContact/"
+      />
 
       <div id="profile-container">
         <div id="profile-circle" className="circle">{`${initials}`}</div>
@@ -42,21 +43,6 @@ function SendToContactScreen() {
             setBalance(e.target.value);
           }}
         />
-        {/* <CapsuleInputField
-          value={test1}
-          onChange={(e) => {
-            console.log(e.target.value);
-            setTest1(e.target.value);
-          }}
-        />
-        <CapsuleInputField
-          value={test2}
-          rows={2}
-          onChange={(e) => {
-            console.log(e.target.value);
-            setTest2(e.target.value);
-          }}
-        /> */}
         <div
           id="estimate-gas-fee"
           className="blue-text"
@@ -66,10 +52,6 @@ function SendToContactScreen() {
       <div id="send-button">
         <CapsuleButton onClick={() => {}}>Send</CapsuleButton>
       </div>
-
-      {/* <h1>SendToContactScreen</h1>
-      <Link to="/editContact">To Edit Contact!</Link>
-      <Link to="/contacts">To Contacts!</Link> */}
     </div>
   );
 }

@@ -1,7 +1,9 @@
 .capsule-input-field {
-  width: 90%;
+  width: 92%;
 
-  padding: 10px 5%;
+  margin: 15px 0px;
+
+  padding: 10px 4%;
   overflow-wrap: break-word;
   resize: none;
 

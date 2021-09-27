@@ -1,0 +1,23 @@
+#edit-contact-screen-root {
+  width: 500px;
+}
+
+#contact-details-container {
+  height: 140px;
+  margin: 30px 0px;
+}
+
+#invalid-address-notice {
+  width: 100%;
+  margin-top: -10px;
+  padding-left: 10px;
+  
+  color: var(--app-orange);
+  text-align: left;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+#buttons-container {
+  margin-top: 40px;
+}

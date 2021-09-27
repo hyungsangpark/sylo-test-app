@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useContext, useReducer, useState } from "react";
 import { IContact } from "./IContact";
 
-export type IUpdateContact = (contact: IContact) => void;
+export type IUpdateContact = (contact: IContact | undefined) => void;
 
 const ContactContext = createContext<IContact | undefined>(undefined);
 const ContactUpdateContext = createContext<IUpdateContact>(() => {});

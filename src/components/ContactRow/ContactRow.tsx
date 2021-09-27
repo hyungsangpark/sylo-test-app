@@ -11,7 +11,7 @@ function ContactRow({ name }: IContactRow) {
   
   return (
     <div className="contact-row-root">
-      <div className="circle">{initial}</div>
+      <div className="circle contact-row-circle">{initial}</div>
       <div className="name">{name}</div>
     </div>
   );

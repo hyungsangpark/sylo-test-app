@@ -6,20 +6,21 @@
   align-items: center;
 }
 
-.circle {
+.contact-row-circle {
   width: 48px;
   height: 48px;
+
+  font-size: 14px;
+}
+
+.circle {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-color: #8c96a8;
-  
   border-radius: 50%;
 
+  background-color: #8c96a8;
   color: white;
-  
-  font-size: 14px;
   font-weight: 500;
 }
 

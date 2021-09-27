@@ -12,10 +12,11 @@ import NewContactRow from "../../components/NewContactRow/NewContactRow";
 import "./ContactsScreen.css";
 import Header from "../../components/Header/Header";
 import { IContact } from "../../common/IContact";
-import { loadContacts, saveContacts } from "../../common/ContactsLoader";
+import {useContact, useContactUpdate } from "../../common/ContactContext";
 
 function ContactsScreen() {
   const history = useHistory();
+  const setContact = useContactUpdate();
   const { account, active, deactivate } = useWeb3React<Web3>();
   const [contacts, setContacts] = useState<IContact[]>([]);
 
@@ -59,7 +60,7 @@ function ContactsScreen() {
             className="contact-row remove-underline"
             id={i.toString()}
             onClick={() => {
-              console.log();
+              setContact(contact);
             }}
           >
             <ContactRow name={contact.name} />

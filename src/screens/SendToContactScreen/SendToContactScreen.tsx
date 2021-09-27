@@ -1,23 +1,25 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import CapsuleButton from "../../components/CapsuleButton/CapsuleButton";
 import CapsuleInputField from "../../components/CapsuleInputField/CapsuleInputField";
 import Header from "../../components/Header/Header";
 
 import "./SendToContactScreen.css";
+import {useContact} from "../../common/ContactContext";
 
 function SendToContactScreen() {
+  const contact = useContact();
+  const history = useHistory();
   const [balance, setBalance] = useState("");
-  const [test1, setTest1] = useState("");
-  const [test2, setTest2] = useState("");
+
+  if (contact === undefined) history.push("/contacts/");
 
   return (
     <div id="send-to-contact-screen-root">
       <div className="header-row">
         <Header
           backLinkAddress="/contacts"
-          backOnClick={() => {}}
-          headerTitle={`Send to ${"Alex Jordan"}`}
+          headerTitle={`Send to ${contact?.name}`}
           editLinkAddress="/editContact/"
         />
       </div>
@@ -27,7 +29,7 @@ function SendToContactScreen() {
         <div
           id="profile-wallet-address"
           className="blue-text"
-        >{`${"0x46Dc1b6bf1D6771b454C26AafECF5E8AA4409e89"}`}</div>
+        >{`${contact?.address}`}</div>
       </div>
 
       <div id="amount-container">

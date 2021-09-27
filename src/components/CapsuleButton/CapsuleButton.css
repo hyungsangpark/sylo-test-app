@@ -3,22 +3,24 @@
   height: 40px;
 
   margin: 5px 0px;
-  
+
   border-style: solid;
   border-color: currentColor;
   border-width: 1px;
   border-radius: 100px;
-  
+
   font-size: 14px;
   font-family: inherit;
   font-weight: 300;
-  
+
   cursor: pointer;
 }
 
 .capsule-button:hover {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.04), 
-    rgba(0, 0, 0, 0.04)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+}
+
+.disabled {
+  opacity: 0.3;
+  cursor: inherit;
 }

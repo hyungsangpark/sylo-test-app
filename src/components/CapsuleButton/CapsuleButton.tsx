@@ -30,7 +30,7 @@ function CapsuleButton({
 
   return (
     <button
-      className="capsule-button"
+      className={"capsule-button" + (disabled ? " disabled" : "")}
       onClick={onClick}
       disabled={disabled}
       color={color}

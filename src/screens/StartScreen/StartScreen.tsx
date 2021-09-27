@@ -57,14 +57,6 @@ function StartScreen() {
       >
         Connect Wallet
       </CapsuleButton>
-      <CapsuleInputField
-        value={balance}
-        forCurrency
-        onChange={(e) => {
-          console.log(e.target.value);
-          setBalance(e.target.value);
-        }}
-      />
     </div>
   );
 }

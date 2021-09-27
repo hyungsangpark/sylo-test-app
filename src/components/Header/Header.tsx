@@ -20,32 +20,29 @@ function Header({
 }: IHeaderProps) {
   return (
     <div className="header-root">
-      <div
-        className="header-button-area header-back-button"
-        onClick={backOnClick}
-      >
-        {"＜"}
-      </div>
-      {/* <Link
-        to={backLinkAddress}
-        className="remove-underline "
-      >
-      </Link> */}
+      <Link to={backLinkAddress} className="remove-underline ">
+        <div
+          className="header-button-area header-back-button"
+          onClick={backOnClick}
+        >
+          {"＜"}
+        </div>
+      </Link>
       <div className="header-title">{headerTitle ?? ""}</div>
       <div className="header-button-area">
-        <div
-          className="header-edit-button"
-          style={editLinkAddress ? {} : { display: "none" }}
-          onClick={editOnClick}
+        <Link
+          to={editLinkAddress ?? ""}
+          className="remove-underline header-button-area"
         >
-          Edit
-        </div>
+          <div
+            className="header-edit-button"
+            style={editLinkAddress ? {} : { display: "none" }}
+            onClick={editOnClick}
+          >
+            Edit
+          </div>
+        </Link>
       </div>
-      {/* <Link
-        to={editLinkAddress ?? ""}
-        className="remove-underline header-button-area"
-      >
-      </Link> */}
     </div>
   );
 }

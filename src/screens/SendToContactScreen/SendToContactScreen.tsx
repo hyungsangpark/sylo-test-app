@@ -14,6 +14,8 @@ function SendToContactScreen() {
 
   if (contact === undefined) history.push("/contacts/");
 
+  const initials = contact?.name.split(" ").map((n) => n[0]).join("");
+
   return (
     <div id="send-to-contact-screen-root">
       <div className="header-row">
@@ -25,7 +27,7 @@ function SendToContactScreen() {
       </div>
 
       <div id="profile-container">
-        <div id="profile-circle" className="circle">{`${"AJ"}`}</div>
+        <div id="profile-circle" className="circle">{`${initials}`}</div>
         <div
           id="profile-wallet-address"
           className="blue-text"
@@ -37,7 +39,6 @@ function SendToContactScreen() {
           value={balance}
           forCurrency
           onChange={(e) => {
-            console.log(e.target.value);
             setBalance(e.target.value);
           }}
         />

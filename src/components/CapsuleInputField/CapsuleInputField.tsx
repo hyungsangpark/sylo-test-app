@@ -5,6 +5,7 @@ import "./CapsuleInputField.css";
 interface ICapsuleInputFieldProps {
   rows?: number;
   value?: string;
+  placeholder?: string;
   forCurrency?: boolean;
   className?: string;
   onChange?: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
@@ -12,6 +13,7 @@ interface ICapsuleInputFieldProps {
 
 function CapsuleInputField({
   value,
+  placeholder,
   forCurrency,
   rows,
   className,
@@ -30,6 +32,7 @@ function CapsuleInputField({
       className={`capsule-input-field ${className}`}
       type="text"
       value={forCurrency ? setUnit(value) : value}
+      placeholder={placeholder}
       onChange={onChange}
     />
   ) : (

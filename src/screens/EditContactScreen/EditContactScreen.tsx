@@ -32,13 +32,12 @@ function EditContactScreen() {
         <CapsuleInputField
           value={name}
           onChange={(e) => {
-            console.log(e.target.value);
             setName(e.target.value);
           }}
         />
         <CapsuleInputField
           value={address}
-          rows={2}
+          // rows={2}
           onChange={(e) => {
             setAddress(e.target.value);
             setInvalidAddress(!library?.utils.isAddress(e.target.value));
@@ -48,7 +47,7 @@ function EditContactScreen() {
           id="invalid-address-notice"
           style={{ display: invalidAddress ? "block" : "none" }}
         >
-          Please enter a valid etherium address.
+          Please enter a valid Etherium address.
         </div>
       </div>
 

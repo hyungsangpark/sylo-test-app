@@ -10,7 +10,7 @@ import { useContact } from "../../common/ContactContext";
 function SendToContactScreen() {
   const contact = useContact();
   const history = useHistory();
-  const [balance, setBalance] = useState("");
+  const [amount, setAmount] = useState("0");
 
   if (contact === undefined) history.push("/contacts/");
 
@@ -29,18 +29,18 @@ function SendToContactScreen() {
 
       <div id="profile-container">
         <div id="profile-circle" className="circle">{`${initials}`}</div>
-        <div
+        <h6
           id="profile-wallet-address"
           className="blue-text"
-        >{`${contact?.address}`}</div>
+        >{`${contact?.address}`}</h6>
       </div>
 
       <div id="amount-container">
         <CapsuleInputField
-          value={balance}
+          value={amount}
           forCurrency
           onChange={(e) => {
-            setBalance(e.target.value);
+            setAmount(e.target.value);
           }}
         />
         <div

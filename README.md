@@ -31,7 +31,7 @@ Currently, it **DOES NOT** support:
 
 ## Running Instructions
 
-Clone the directory and run through the terminal using the command:
+Clone the directory and run with the terminal using the command:
 
 `npm run start`
 

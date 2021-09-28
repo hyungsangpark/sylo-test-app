@@ -15,6 +15,7 @@ function StartScreen() {
       <img
         src="https://raw.githubusercontent.com/MetaMask/brand-resources/master/SVG/metamask-fox.svg"
         className="image"
+        alt="Metamask Logo - Metamask Fox"
       />
       <h1 className="app-title">Crypto address book</h1>
       <p className="description">

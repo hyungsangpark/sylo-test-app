@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Colors from "../../assets/Colors";
 
 import "./CapsuleButton.css";
 
@@ -20,7 +19,7 @@ function CapsuleButton({
 }: ICapsuleButtonProps) {
   const isOutlinedButton = variant === "outlined";
 
-  color = color ?? Colors.Orange;
+  color = color ?? "var(--app-orange)"
 
   const overriddenStyles = {
     backgroundColor: "var(--background-color)",

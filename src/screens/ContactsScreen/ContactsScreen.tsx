@@ -5,7 +5,6 @@ import ContactRow from "../../components/ContactRow/ContactRow";
 
 import { useWeb3React } from "@web3-react/core";
 import Web3 from "web3";
-import Colors from "../../assets/Colors";
 import NewContactRow from "../../components/NewContactRow/NewContactRow";
 
 import "./ContactsScreen.css";
@@ -69,7 +68,7 @@ function ContactsScreen() {
       </div>
 
       <Link to="/" className="disconnect-button-row">
-        <CapsuleButton color={Colors.Blue} onClick={deactivate}>
+        <CapsuleButton color="var(--app-blue)" onClick={deactivate}>
           Disconnect
         </CapsuleButton>
       </Link>

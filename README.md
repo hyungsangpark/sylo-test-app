@@ -13,7 +13,7 @@ This is a React + TypeScript App which uses web3 and Metamask to build a crypto 
 
 ## Requirements
 
-This app **requires** Metamask Extension to be installed; please make sure Metamask extension is installed on your browser.
+This app **requires** Metamask Extension to be installed; please make sure Metamask extension is installed on your browser. If Metamask browser extension is not installed on your browser yet, please install it from the following link: https://metamask.io/
 
 
 

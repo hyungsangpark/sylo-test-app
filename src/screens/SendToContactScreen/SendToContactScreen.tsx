@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import CapsuleButton from "../../components/CapsuleButton/CapsuleButton";
 import CapsuleInputField from "../../components/CapsuleInputField/CapsuleInputField";
 import Header from "../../components/Header/Header";

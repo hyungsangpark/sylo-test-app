@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import CapsuleButton from "../../components/CapsuleButton/CapsuleButton";
-import { injected } from "../../components/Connectors/Connectors";
 import ContactRow from "../../components/ContactRow/ContactRow";
 
 import { useWeb3React } from "@web3-react/core";
@@ -12,12 +11,12 @@ import NewContactRow from "../../components/NewContactRow/NewContactRow";
 import "./ContactsScreen.css";
 import Header from "../../components/Header/Header";
 import { IContact } from "../../common/IContact";
-import { useContact, useContactUpdate } from "../../common/ContactContext";
+import { useContactUpdate } from "../../common/ContactContext";
 
 function ContactsScreen() {
   const history = useHistory();
   const setContact = useContactUpdate();
-  const { account, active, deactivate } = useWeb3React<Web3>();
+  const { active, deactivate } = useWeb3React<Web3>();
   const [contacts, setContacts] = useState<IContact[]>([]);
 
   useEffect(() => {

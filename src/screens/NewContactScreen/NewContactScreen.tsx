@@ -1,6 +1,6 @@
 import { useWeb3React } from "@web3-react/core";
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Web3 from "web3";
 import { IContact } from "../../common/IContact";
 import CapsuleButton from "../../components/CapsuleButton/CapsuleButton";

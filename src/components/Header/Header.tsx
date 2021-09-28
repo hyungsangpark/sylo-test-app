@@ -1,5 +1,4 @@
-import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./Header.css";
 
@@ -35,10 +34,7 @@ function Header({
           className="remove-underline header-button-area"
           style={editLinkAddress ? {} : { display: "none" }}
         >
-          <div
-            className="header-edit-button"
-            onClick={editOnClick}
-          >
+          <div className="header-edit-button" onClick={editOnClick}>
             Edit
           </div>
         </Link>

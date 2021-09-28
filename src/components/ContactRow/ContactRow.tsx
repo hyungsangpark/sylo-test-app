@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./ContactRow.css"
 
 interface IContactRow {

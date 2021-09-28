@@ -1,5 +1,3 @@
-import React from 'react';
-
 import "./NewContactRow.css"
 
 function NewContactRow() {

@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, FormEventHandler } from "react";
+import { ChangeEventHandler } from "react";
 
 import "./CapsuleInputField.css";
 

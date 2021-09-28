@@ -16,9 +16,11 @@
 
   border-radius: 100px;
   border-style: none;
-  border-color: #f6f6f6;
+  border-color: var(--overlay-background-color);
 
-  background-color: #f6f6f6;
+  background-color: var(--overlay-background-color);
+
+  color: var(--color);
 }
 
 .capsule-input-field:focus {

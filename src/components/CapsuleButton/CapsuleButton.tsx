@@ -23,7 +23,7 @@ function CapsuleButton({
   color = color ?? Colors.Orange;
 
   const overriddenStyles = {
-    backgroundColor: "white",
+    backgroundColor: "var(--background-color)",
     borderColor: `${color}`,
     color: `${color}`,
   };

@@ -16,7 +16,8 @@
 }
 
 .header-back-button {
-  color: black;
+  /* color: black; */
+  color: var(--color);
   font-size: 40px;
   font-weight: 100;
 }

@@ -3,11 +3,11 @@
 .App {
   display: flex;
   justify-content: center;
+  padding: 10px;
   
   text-align: center;
   font-family: 'Inter', sans-serif;
   
   --app-orange: #e0643a;
   --app-blue: #526aa2;
-  --app-blue-gray: #8c96a8;
 }

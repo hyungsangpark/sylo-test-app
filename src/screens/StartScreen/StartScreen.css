@@ -1,4 +1,4 @@
-.start-screen-root {
+#start-screen-root {
   height: 90vh;
   width: 400px;
   display: flex;
@@ -7,23 +7,18 @@
   justify-content: center;
 }
 
-.app-title {
+#app-title {
   color: var(--dark-color-main-secondary);
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-.description {
-  margin-top: 5px;
-  margin-bottom: 40px;
-}
-
-.buttons {
-  height: 20px;
-  width: 1000px;
-}
-
-.image {
+#logo-image {
   width: 200px;
   height: 200px;
+}
+
+#app-description {
+  margin-top: 5px;
+  margin-bottom: 40px;
 }

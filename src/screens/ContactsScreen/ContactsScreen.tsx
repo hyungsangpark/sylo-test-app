@@ -35,7 +35,7 @@ function ContactsScreen() {
   }, [active]);
 
   return (
-    <div className="contacts-screen-root">
+    <div id="contacts-screen-root">
       <Header
         backLinkAddress="/"
         backOnClick={() =>
@@ -44,7 +44,7 @@ function ContactsScreen() {
         headerTitle="Address Book"
       />
 
-      <div className="new-contacts-row">
+      <div id="new-contacts-row">
         <Link to="/newContact" style={{ textDecoration: "none" }}>
           <NewContactRow />
         </Link>
@@ -55,7 +55,7 @@ function ContactsScreen() {
           return (
             <Link
               to="/sendToContact/"
-              className="contact-row remove-underline"
+              className="remove-underline"
               key={i.toString()}
               onClick={() => {
                 setContact(contact);
@@ -67,7 +67,7 @@ function ContactsScreen() {
         })}
       </div>
 
-      <Link to="/" className="disconnect-button-row">
+      <Link to="/" id="disconnect-button-row">
         <CapsuleButton color="var(--color-secondary)" onClick={deactivate}>
           Disconnect
         </CapsuleButton>

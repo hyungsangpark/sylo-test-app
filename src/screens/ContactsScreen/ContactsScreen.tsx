@@ -39,7 +39,6 @@ function ContactsScreen() {
     <div className="contacts-screen-root">
       <Header
         backLinkAddress="/"
-        // backOnClick={deactivate}
         backOnClick={() =>
           setContacts([...contacts, { name: "Spark Mobile", address: "hey!" }])
         }

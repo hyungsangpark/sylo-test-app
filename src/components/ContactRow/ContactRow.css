@@ -26,6 +26,5 @@
 
 .name {
   margin-left: 20px;
-  /* color: black; */
   color: var(--color);
 }

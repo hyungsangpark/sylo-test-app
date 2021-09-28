@@ -37,7 +37,6 @@ function EditContactScreen() {
         />
         <CapsuleInputField
           value={address}
-          // rows={2}
           onChange={(e) => {
             setAddress(e.target.value);
             setInvalidAddress(!library?.utils.isAddress(e.target.value));
@@ -84,10 +83,6 @@ function EditContactScreen() {
           }
         }}>Save</CapsuleButton>
       </div>
-
-      {/* <h1>EditContactScreen</h1>
-      <Link to="/editContent">Back to Send To Contact</Link>
-      <Link to="/contacts">Back to Contacts</Link> */}
     </div>
   );
 }

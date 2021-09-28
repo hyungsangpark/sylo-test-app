@@ -1,5 +1,4 @@
 .header-root {
-  /* margin: 10px; */
   margin: 20px 0px;
   padding-left: 0px;
   padding-right: 0px;
@@ -16,7 +15,6 @@
 }
 
 .header-back-button {
-  /* color: black; */
   color: var(--color);
   font-size: 40px;
   font-weight: 100;

@@ -60,9 +60,6 @@ function NewContactScreen() {
             history.push("/contacts");
           }
         }}>Save</CapsuleButton>
-
-      {/* <h1>NewContactScreen</h1>
-      <Link to="/contacts">To Contacts</Link> */}
     </div>
   );
 }

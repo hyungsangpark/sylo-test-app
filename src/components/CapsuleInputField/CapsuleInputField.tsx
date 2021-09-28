@@ -3,7 +3,6 @@ import { ChangeEventHandler } from "react";
 import "./CapsuleInputField.css";
 
 interface ICapsuleInputFieldProps {
-  rows?: number;
   value?: string;
   placeholder?: string;
   forCurrency?: boolean;
@@ -15,7 +14,6 @@ function CapsuleInputField({
   value,
   placeholder,
   forCurrency,
-  rows,
   className,
   onChange,
 }: ICapsuleInputFieldProps) {
@@ -25,21 +23,12 @@ function CapsuleInputField({
     return value.replace(new RegExp("([ ETH]+)"), "") + " ETH";
   };
 
-  if (rows === undefined || rows < 2) rows = 1;
-
-  return (rows === 1) ? (
+  return (
     <input
       className={`capsule-input-field ${className}`}
       type="text"
       value={forCurrency ? setUnit(value) : value}
       placeholder={placeholder}
-      onChange={onChange}
-    />
-  ) : (
-    <textarea
-      className={`capsule-input-field ${className}`}
-      rows={rows}
-      value={value}
       onChange={onChange}
     />
   );

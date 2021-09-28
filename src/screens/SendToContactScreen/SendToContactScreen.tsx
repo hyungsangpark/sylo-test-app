@@ -79,7 +79,7 @@ function SendToContactScreen() {
             id="invalid-amount-notice"
             style={{ display: overBalance ? "block" : "none" }}
           >
-            Amount trying to send is more than your current balance.
+            Amount to send exceeds balance.
           </div>
           <div
             id="invalid-input-notice"

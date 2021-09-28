@@ -11,6 +11,12 @@ This is a React + TypeScript App which uses web3 and Metamask to build a crypto 
 
 
 
+## Requirements
+
+This app **requires** Metamask Extension to be installed; please make sure Metamask extension is installed on your browser.
+
+
+
 ## Features and Limitations
 
 Currently, it supports:
@@ -19,7 +25,7 @@ Currently, it supports:
 - Adding a user to the Address Book.
 - Removing a user in the Address Book.
 - Modifying name or ethereum address of a user in the Address Book.
-- Dark Mode based on User's system preferences.
+- Dark Mode based on **User's system preferences**. (i.e. you need to change system-wide dark mode settings on your system to view the address book in dark mode.)
 
 
 

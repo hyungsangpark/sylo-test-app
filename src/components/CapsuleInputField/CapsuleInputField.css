@@ -8,7 +8,8 @@
   resize: none;
 
   font-family: inherit;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
 
   display: flex;
   align-items: center;
@@ -16,11 +17,9 @@
 
   border-radius: 100px;
   border-style: none;
-  border-color: var(--overlay-background-color);
 
-  background-color: var(--overlay-background-color);
-
-  color: var(--color);
+  background-color: var(--shade-card-default);
+  color: var(--color-main-primary);
 }
 
 .capsule-input-field:focus {

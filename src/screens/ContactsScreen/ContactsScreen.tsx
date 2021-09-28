@@ -56,7 +56,7 @@ function ContactsScreen() {
             <Link
               to="/sendToContact/"
               className="contact-row remove-underline"
-              id={i.toString()}
+              key={i.toString()}
               onClick={() => {
                 setContact(contact);
               }}
@@ -68,7 +68,7 @@ function ContactsScreen() {
       </div>
 
       <Link to="/" className="disconnect-button-row">
-        <CapsuleButton color="var(--app-blue)" onClick={deactivate}>
+        <CapsuleButton color="var(--color-secondary)" onClick={deactivate}>
           Disconnect
         </CapsuleButton>
       </Link>

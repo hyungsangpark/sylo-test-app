@@ -19,10 +19,10 @@ function CapsuleButton({
 }: ICapsuleButtonProps) {
   const isOutlinedButton = variant === "outlined";
 
-  color = color ?? "var(--app-orange)"
+  color = color ?? "var(--color-primary)"
 
   const overriddenStyles = {
-    backgroundColor: "var(--background-color)",
+    backgroundColor: "var(--shade-background)",
     borderColor: `${color}`,
     color: `${color}`,
   };

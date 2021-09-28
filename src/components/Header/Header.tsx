@@ -27,7 +27,7 @@ function Header({
           {"＜"}
         </div>
       </Link>
-      <div className="header-title">{headerTitle ?? ""}</div>
+      <div>{headerTitle ?? ""}</div>
       <div className="header-button-area">
         <Link
           to={editLinkAddress ?? ""}

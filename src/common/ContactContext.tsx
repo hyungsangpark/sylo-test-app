@@ -14,7 +14,7 @@ export function useContactUpdate() {
   return useContext(ContactUpdateContext);
 }
 
-export function ContactProvider({children}: {children: ReactNode }) {
+export function ContactProvider({ children }: { children: ReactNode }) {
   const [contact, setContact] = useState<IContact>();
 
   return (
@@ -24,5 +24,4 @@ export function ContactProvider({children}: {children: ReactNode }) {
       </ContactUpdateContext.Provider>
     </ContactContext.Provider>
   );
-
 }

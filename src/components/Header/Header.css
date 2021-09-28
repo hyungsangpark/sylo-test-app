@@ -15,16 +15,12 @@
 }
 
 .header-back-button {
-  color: var(--color);
+  color: var(--color-main-primary);
   font-size: 40px;
   font-weight: 100;
 }
 
-.header-title {
-  font-weight: 300;
-}
-
 .header-edit-button {
-  color: var(--app-blue);
+  color: var(--color-secondary);
   font-size: 16px;
 }

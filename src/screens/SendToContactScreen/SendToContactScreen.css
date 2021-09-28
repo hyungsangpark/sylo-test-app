@@ -3,7 +3,7 @@
 }
 
 .blue-text {
-  color: var(--app-blue);
+  color: var(--color-secondary);
 }
 
 #profile-container {
@@ -33,6 +33,7 @@
   width: 50%;
   margin: 20px 0px;
   
+  color: var(--color-secondary);
   overflow-wrap: break-word;
   text-transform: lowercase;
 }
@@ -47,6 +48,7 @@
 
 #estimate-gas-fee {
   margin-top: 10px;
+  color: var(--color-secondary);
 }
 
 #invalid-amount-notice, #invalid-input-notice {
@@ -54,7 +56,7 @@
   margin-top: -10px;
   padding-left: 10px;
   
-  color: var(--app-orange);
+  color: var(--status-error);
   text-align: left;
   font-weight: 300;
   font-size: 14px;

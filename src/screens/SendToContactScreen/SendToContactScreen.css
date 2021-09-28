@@ -23,6 +23,12 @@
   margin: 10px 0px;
 }
 
+@media (max-width: 400px) {
+  #profile-wallet-address {
+    font-size: 13px;
+  }
+}
+
 #profile-wallet-address {
   width: 50%;
   margin: 20px 0px;
@@ -35,8 +41,23 @@
   margin: 20px 0px;
 }
 
+#amount-input-container {
+  height: 65px;
+}
+
 #estimate-gas-fee {
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+#invalid-amount-notice, #invalid-input-notice {
+  width: 100%;
+  margin-top: -10px;
+  padding-left: 10px;
+  
+  color: var(--app-orange);
+  text-align: left;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 #send-button {

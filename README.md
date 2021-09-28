@@ -19,6 +19,7 @@ Currently, it supports:
 - Adding a user to the Address Book.
 - Removing a user in the Address Book.
 - Modifying name or ethereum address of a user in the Address Book.
+- Dark Mode based on User's system preferences.
 
 
 
